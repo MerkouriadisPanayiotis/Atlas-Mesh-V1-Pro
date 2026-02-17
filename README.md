@@ -35,12 +35,11 @@ AtlasMesh v1 simulates a fully autonomous mesh network, demonstrating:
 
 ---
 
-## 🛠 Installation
+##  Installation
 
 1. Clone the repository:
 
-```bash
-git clone https://github.com/yourusername/AtlasMesh.git
+git clone https://github.com/MerkouriadisPanayiotis/Atlas-Mesh-V1-Pro
 cd AtlasMesh
 
 Create a Python virtual environment
