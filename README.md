@@ -19,54 +19,53 @@ AtlasMesh allows users to visualize how autonomous mesh networks operate in a co
 
 ---
 
-## 🛠️ Installation & Setup
+## 🛠️ Installation & How to Run
 
-1. **Navigate to the project:**
-   ```bash
-   cd AtlasMesh
-Create and enter Virtual Environment:
+Follow these steps exactly to get the project running.
 
-Windows: python -m venv venv then venv\Scripts\activate
+### 1. Setup Environment
+```bash
+# Enter project folder
+cd AtlasMesh
 
-Mac/Linux: python3 -m venv venv then source venv/bin/activate
+# Create and enter Virtual Environment
+# Windows:
+python -m venv venv
+venv\Scripts\activate
 
-Install dependencies:
+# Mac/Linux:
+python3 -m venv venv
+source venv/bin/activate
 
-Bash
+# Install all requirements
 pip install -r requirements.txt
-Install Cloud Server dependencies:
-
-Bash
 cd cloud_server
 pip install -r requirements.txt
-⚡ How to Run
-Step 1: Start the Cloud Server
-
-From the cloud_server folder, run:
+2. Start the Cloud Server (Terminal 1)
 
 Bash
+# Inside the cloud_server folder:
 uvicorn server:app --reload
-KEEP THIS TERMINAL TAB OPEN.
+IMPORTANT: KEEP THIS TERMINAL TAB OPEN.
 
-Step 2: Run the Mesh Simulation
+3. Start the Mesh Simulation (Terminal 2)
 
 OPEN A NEW TERMINAL WINDOW.
 
-Navigate to the project: cd AtlasMesh
+Navigate to project: cd AtlasMesh
 
-Activate the venv:
+Activate venv:
 
 Windows: venv\Scripts\activate
 
 Mac/Linux: source venv/bin/activate
 
-Start the simulation:
+Launch simulator:
 
 Bash
 python mesh_sim.py
-
-Usage Instructions
-Once active, use the menu to control the simulation:
+🖥️ Usage Instructions
+Once active, use these menu keys to control the simulation:
 
 [1],Send Message,Send a packet from Node A to Node C.
 [2],Take B Offline,Simulates hardware failure; triggers message queuing.
