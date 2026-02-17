@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  cloud:
+    build: ../cloud_server
+    ports:
+      - "8000:8000"
+
+  node:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.node
+    depends_on:
+      - cloud
